@@ -1,0 +1,78 @@
+<%- include('partials/header') %>
+
+<script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<div class="container2">
+    <h2>How are you feeling today?</h2>
+</div>
+<div class="resize">
+  <h3>Select your emotions:</h3>
+</div>
+
+
+  <a id="happiness" class="expression" href="/search?id=happiness">
+  	<div class="text">HAPPY</div>
+  </a>
+  <a id="sadness" class="expression2" href="/search?id=sadness">
+  	<div class="text">SAD</div>
+  </a>
+  <a id="anger" class="expression3" href="/search?id=anger">
+  	<div class="text">ANGRY</div>
+  </a>
+  <a id="fear" class="expression4" href="/search?id=fear">
+  <div class="text">FEAR</div>
+  </a>
+
+<div class="resize2">
+<h3>Or.. Have us capture for you!</h3>
+</div>
+
+<div class = "webcam">
+<video id="webcam" autoplay class="video"></video>
+<canvas id="canvas" class="d-none" style= width:"1200px"></canvas>
+
+<script>
+  var canvas = document.getElementById('canvas');
+  var dataURL = canvas.toDataURL();
+window.open(dataURL);
+</script>
+
+<script>
+const webcamElement = document.getElementById('webcam');
+const canvasElement = document.getElementById('canvas');
+const snapSoundElement = document.getElementById('snapSound');
+const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
+
+function take(){
+  let picture = webcam.snap();
+  document.querySelector('#download-photo').href = picture;
+  // preload shutter audio clip
+   var shutter = new Audio();
+   shutter.autoplay = true;
+   shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+   // play sound effect
+  shutter.play();
+  document.getElementById('images').innerHTML = "<img src=\"" + picture + "\">";
+
+  //return picture;
+}
+</script>
+
+<script>
+    webcam.start();
+</script>
+</div>
+
+
+<div class = "photo" width="100%" height ="100%" style="left:360px">
+  <button type="button" onclick="take()" style="margin-left: 20px; margin-bottom: 5px;" class="btn btn-warning"><b>Capture</b></button>
+  <form action="/search" method="post">
+    <button type="submit" class="btn btn-light" style="margin-left:5px;float:left;"><b>Submit Image</b></button>
+  </form>
+
+</div>
+<a class="btn btn-light btn-lg" href="/home"><b>Go Back</b></a>
+
+<%- include('partials/footer') %>

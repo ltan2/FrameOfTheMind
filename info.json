@@ -1,0 +1,74 @@
+{
+    "anger": {
+    	"mood":"angry",
+        "quote": ["If you are patient in one moment of anger, you will escape a hundred days of sorrow - Chinese Proverb",
+                  "Try to manager your anger since people can't manage their stupidity - 101 Quotes About.com",
+                  "For every minute you are angry you lose sixty seconds of happiness - Ralph Waldo Emerson"],
+        "activities": [
+          "Distract yourself - listen to music, read a book, watch a movie or find your happy place",
+          "Discuss your anger with someone trustworthy",
+          "Cool off with exercise - walking, gardening, cleaning, kickboxing or running"
+        ]
+    },
+    "sadness": {
+    	"mood":"sad",
+        "quote": ["Things change. And friends leave. Life doesn't stop for anybody - Stephen Chbosky",
+                  "What brings us to tears will lead us to grace. Out pain is never wasted - Bob Goff",
+                  "Where there is no struggle, there is no strength - Oprah Winfrey"
+                  ],
+        "activities": [
+          "Eat the best chocolate you can get your hands on!",
+          "Hang out with friends who can make you feel good",
+          "Sing loudly, badly and off-key"
+        ]
+    },
+    "disgust": {
+    	"mood":"disgusted",
+        "quote": ["All is disgust when a man leaves his own nature and does what is unfit - Sophocles",
+                  "Disgust and resolve are two of the great emotions -Jim Rohn",
+                  "Fear is danger to your body, but disgust is danger to your soul - Diane Ackerman"],
+        "activities": [
+          "Recognize that help is needed - ask someone trustworth for advice",
+          "Respond with flexibility",
+          "Ask questions of your internal experience \"What do I need?\", \"How can I be with myself in the most supportive way?\""
+        ]
+    },
+
+    "surprise": {
+    	"mood":"shock",
+        "quote": ["Expect the unexpected. Life is full of wonderful things just waiting to surprise you. - Sweet Harmony",
+                  "Surprise is the greatest gift which life can grant us - Boris Pasternak",
+                  "To be surprised, to wonder, is to begin to understand. - Jose Ortega y Gasset"
+                  ],
+        "activities": [
+          "Try not yo hit anyone or throw anything. That urge is your fight reaction",
+          "Breath in and out. You need to give yourself a few minutes to process this",
+          "Ask friends and families who are trustworthy for support"
+        ]
+    },
+    "fear": {
+    	"mood":"scared",
+        "quote": ["Fear doesn't shut you down; it wakes you up - Veronica Roth, Divergent",
+                  "Do not fear mistakes. You will know failure. Continue to reach out. - Benjamin Franklin",
+                  "Extreme Fear can neither fight or flight - William Shakespear"
+                 ],
+        "activities": [
+          "Don't try to be perfect",
+          "Focus on your breathing. Breath through panic",
+          "Learn more about your fear. Talk to someone who you can trust."
+        ]
+    },
+    "happiness": {
+    	"mood":"happy",
+        "quote": ["The less you care what others think, the happier you'll be - Quotereel.com",
+                  "Happiness is the best makeup - Drew Barrymore",
+                  "Keep smiling...and one day life will get tired of upsetting you. - DespicableMeMinions.org"
+                 ],
+        "activities": [
+          "Give a compliment to somebody or give back to society",
+          "Hang out with friends",
+          "Explore meditation"
+        ]
+    }
+
+}

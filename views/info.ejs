@@ -1,0 +1,34 @@
+<%- include('partials/header') -%>
+  <body>
+
+  <div class="head">
+  	<h4>If you are feeling <%=emotion%>...</h4>
+  </div>
+  <div class="left-body">
+    <h11 style="font-family:Roboto;font-size:35px">Listen To: </h11>
+    <br>
+    <h12 style="font-family:Roboto; font-size:20px"><%=songTitle%> by: <%=songSinger%></h12>
+    <img src = <%=songImage%> >
+    <div id="playAudio" style="margin-top:5%">
+        <audio controls name="media" height="70" width="500">
+          <source src="<%= songUri %>" type="audio/x-m4a">
+        </audio>
+      </div>
+  </div>
+  <div class="upper-right">
+    <h12 style="font-family:Roboto; font-size:35px">Quotes of the day...</h12>
+    <br>
+    <% for(var i = 0; i < quotes.length; i++){ %>
+      <h14 style="font-family:Roboto; font-size:20px"><%=quotes[i]%></h14><br><br>
+    <% } %>
+  </div>
+  <div class="lower-right">
+    <h13 style="font-family:Roboto; font-size:35px">Try to do this... </h13><br>
+    <% for(var i = 0; i < activities.length; i++){ %>
+      <h14 style="font-family:Roboto; font-size:25px"><%=activities[i]%></h14><br>
+    <% } %>
+  </div>
+    <!-- Begin page content -->
+  </body>
+<a class="btn btn-light btn-lg" href="/mood"><b>Go Back</b></a>
+<%- include('partials/footer')-%>
